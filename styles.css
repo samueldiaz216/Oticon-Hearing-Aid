@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+  
+}
+
+
+
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+}
+.social li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+
+  .hearingAid img{
+    width: 350px;
+  }
+
+  .charger img{
+    width: 325px;
+  }
+}
+
+.buyNow{
+  display: inline-block;
+  font-size: 1em;
+  background: #111;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  position: fixed;
+  top:80%;
+  left:78%;
+  z-index: 2000;
+  opacity: 0.6;
+}
+
+.buyNow:hover{
+  letter-spacing: 6px;
+  opacity: 1;
+}
+
+.information{
+  position:relative;
+  top:700px;
+  padding: 100px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;   
+}
+
+.hearingAid{
+  text-align: center;
+  flex:1;
+}
+
+
+.bulletPoints{
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+}
+
+.bulletPoints div{
+  padding:20px;
+  text-align: center;
+}
+
+.bulletPoints div h3{
+  padding:20px;
+  text-transform: uppercase;
+}
+
+.bulletPoints div a{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.bulletPoints div a:hover
+{
+  letter-spacing: 6px;
+}
+
+.reverseImage{
+  transform: scaleX(-1);
+  position: relative;
+  left:6px;
+}
+
+.connectMore{
+  position: relative;
+  top:700px;
+  text-align: center;
+}
+
+.connectMore img{
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.connectMore div h1{
+  text-transform: uppercase;
+  padding:5px;
+}
+
+.connectMore div p{
+  text-transform: uppercase;
+  padding:20px;
+  text-align: left;
+}
+
+.connectMoreInfo{
+  position:relative;
+  padding: 100px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;  
+
+}
+
+.connectMoreInfo div div{
+  flex-direction: column;
+}
+
+.connectMoreInfo div{
+  flex:1;
+}
+
+.connectMoreInfo div img{
+  position:relative;
+  bottom:100px;
+}
+
+@media(max-width: 1228px){
+  .connectMoreImage{
+    display:none;
+  }
+}
+
+.brainSupport{
+  position: relative;
+  top:650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding:100px;
+  background-image:
+    linear-gradient(black, black),
+    url("milad-b-fakurian-58Z17lnVS4U-unsplash-min-min.jpg");
+  background-blend-mode: saturation;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity:0.70;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.brainSupport p{
+  padding:10px;
+}
+
+.brainSupport h1{
+  padding:20px;
+  text-transform: uppercase;
+}
+
+.brainSupport h2{
+  padding:20px;
+  text-transform: uppercase;
+}
+
+.footnotes{
+  font-size: small;
+}
+
+.neuralNetwork{
+  position: relative;
+  top:800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding:100px;
+  background-image:
+    url("pexels-yan-krukov-5792901-min.jpg");
+  background-blend-mode: saturation;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity:0.90;
+  background-attachment: fixed;
+  color: white;
+}
+
+.neuralNetwork p{
+  padding:10px;
+}
+
+.neuralNetwork h1{
+  padding:20px;
+  text-transform: uppercase;
+}
+
+.charger{
+  position: relative;
+  top:800px;
+  text-align: center;
+}
+
+.charger div h1{
+  text-transform: uppercase;
+  padding:5px;
+}
+
+.charger div p{
+  text-transform: uppercase;
+  padding:20px;
+  text-align: left;
+}
+
+.chargerInfo{
+  position:relative;
+  padding: 100px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;  
+
+}
+
+.chargerInfo div{
+  flex:1;
+}
+
+footer{
+  position: relative;
+  top: 1000px;
+  background-color: #111;
+  color: #fff;
+  padding-top: 70px;
+  padding-bottom: 40px;
+
+}
+
+footer div{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div ul{
+  display:flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+footer div ul li a
+{
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  transform: scale(0.5);
+  transition: 0.5s;
+  text-decoration: none;
+}
+  
+
+footer div ul li a:hover
+{
+  transform: scale(0.5) translateY(-15px);
+}
+
+.smallSocialImg{
+  width:45px;
+}
+
+.copyright{
+  position: relative;
+  color:gray;
+}
+
+.logo{
+  width:150px;
+}
+
+.oticonPink{
+  color:#f21170;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
